@@ -15,8 +15,8 @@
         resetUI();
         $("#loaderSign").show();
 
-        $.getJSON("https://Conquerer-of-the-world.github.io/CSAI-Content-based-Movie-Recommendation-system/data/json/movies.json", function (moviesData) {
-            $.getJSON("https://Conquerer-of-the-world.github.io/CSAI-Content-based-Movie-Recommendation-system/data/json/ratings.json", function (ratingsData) {
+        $.getJSON("https://n-i-3.github.io/CSAI-Content-based-Movie-Recommendation-system/data/json/movies.json", function (moviesData) {
+            $.getJSON("https://n-i-3.github.io/CSAI-Content-based-Movie-Recommendation-system/data/json/ratings.json", function (ratingsData) {
                 let movies = new dfd.DataFrame(moviesData);
                 let ratings = new dfd.DataFrame(ratingsData);
                 let df = dfd.merge({ left: movies, right: ratings, on: ["movieId"], how: "inner"})
